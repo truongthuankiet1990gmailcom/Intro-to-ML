@@ -5,6 +5,7 @@ This is the Final Project of the Introduction to Machine Learning (CSC14005) cou
 
 - Kaggle Competition: https://www.kaggle.com/competitions/introml-clc-hk2-2425/
 
+- Link Deployment: https://truongthuankiet1990gmailcom-intro-to-ml-app-du1wh5.streamlit.app/
 ## Project Overview
 This project follows a practical machine learning development cycle, structured in three iterative phases:
 
