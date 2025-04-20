@@ -36,7 +36,8 @@ def preprocess_time(data):
     return data
 
 # Streamlit application title
-st.title("Phase 1: Machine Learning Model Deployment")
+st.title("Phase 1: SKLearn Model Deployment")
+st.write("This is the first phase of the machine learning model deployment.")
 
 # User input for features
 st.sidebar.header("User Input Features")
@@ -120,17 +121,16 @@ st.write("Input Data:")
 st.write(input_data)
 
 # Prediction logic
-if st.button("Predict"):
-    prediction = voting_model.predict(input_data)
-    prediction_og = np.expm1(prediction[0])  # Inverse log transformation
-    st.write("Prediction:", prediction_og)
+prediction = voting_model.predict(input_data)
+prediction_og = np.expm1(prediction[0])  # Inverse log transformation
+st.write("Prediction:", prediction_og)
     
-    prediction_dt = decision_tree.predict(input_data)
-    prediction_dt_og = np.expm1(prediction_dt[0])  # Inverse log transformation
-    st.write("Decision Tree Prediction:", prediction_dt_og)
+prediction_dt = decision_tree.predict(input_data)
+prediction_dt_og = np.expm1(prediction_dt[0])  # Inverse log transformation
+st.write("Decision Tree Prediction:", prediction_dt_og)
     
-    prediction_rf = rf_model.predict(input_data)
-    prediction_rf_og = np.expm1(prediction_rf[0])  # Inverse log transformation
-    st.write("Random Forest Prediction:", prediction_rf_og)
+prediction_rf = rf_model.predict(input_data)
+prediction_rf_og = np.expm1(prediction_rf[0])  # Inverse log transformation
+st.write("Random Forest Prediction:", prediction_rf_og)
     
     

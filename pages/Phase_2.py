@@ -35,7 +35,8 @@ def preprocess_time(data):
         return data
     
 
-st.title("Phase 2: Machine Learning Model Deployment")
+st.title("Phase 2: Gradient Boosting Model Deployment")
+st.write("This is the second phase of the machine learning model deployment.")
 
 # User input for features
 st.sidebar.header("User Input Features")
