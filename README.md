@@ -45,7 +45,7 @@ The deployed model generates probability scores or predictions, offering more nu
 
 ---
 
-# 4. Solution Pipeline
+# 4.🔍 Solution Pipeline
 
 ## General EDA
 ### Dataset overview: 
@@ -337,14 +337,14 @@ Attentive Interpretable Tabular Learning. Neural network architecture developed 
 
 ---
 
-### 7. Contest Results
+### 5.📊 Contest Results
 Earned the first place in both private and public score leaderboard:
 <img src = "Images/first_place.png">
 <img src = "Images/first_place_private.png">
 
 ---
 
-### 8. Web App and Next Steps
+### 6.💻 Web App and Next Steps
 - The Streamlit app allows users to input data and receive predictions, integrating the trained model and preprocessing pipeline.
 - However, due to some technical issues, we could only deployed Phase 1 and XGBoost and LightGBM of Phase 2.
 - Future steps include optimizing deployment (e.g., cloud hosting on AWS) and enhancing the app with additional features like interactive visualizations.
@@ -352,7 +352,7 @@ Earned the first place in both private and public score leaderboard:
 
 ---
 
-### 9. Run This Project Locally
+### 7. Run This Project Locally
 
 #### Prerequisites
 - Python 3.11+
