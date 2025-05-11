@@ -330,30 +330,23 @@ Attentive Interpretable Tabular Learning. Neural network architecture developed 
 -	While being the fastest model, LinearModel provide worse performance, due to it simple architect.
 -	ResidualNetwork have deeper layers and more computational, therefore take longer to train.
 
----
-
-### 5. Main Business Insights
-- Insights will vary based on the dataset and competition task. For example, if predicting a numerical target, trends in feature distributions or correlations could be highlighted with visualizations (e.g., scatter plots, heatmaps).
-- Analysis of key features and their impact on the target variable should be included, supported by graphs or tables.
-
----
-
-### 6. Modeling
-1. Preprocessing involved tailored transformations (e.g., one-hot encoding for linear models, ordinal encoding for tree-based models) and feature engineering to create relevant predictors.
-2. Models were compared using cross-validation with metrics suited to the task (e.g., RMSE for regression, AUC-ROC for classification).
-3. The best-performing model (e.g., LightGBM or XGBoost) underwent feature selection (e.g., RFE) and hyperparameter tuning (e.g., Bayesian optimization).
-4. Final model performance was assessed with detailed metrics, validated against the test set, and interpreted using techniques like SHAP values to align with EDA findings.
+## Best model performance
+- The best result in Phase 2 likely resulted from the Voting Regressor, which leveraged the strengths of XGBoost, LightGBM, and CatBoost to mitigate individual model weaknesses.
+- The extensive feature engineering (e.g., temporal and interaction features) provided a richer feature set that the ensemble could exploit, despite the negative R² values in cross-validation.
+- LightGBM’s efficiency with large datasets and missing values, combined with CatBoost’s handling of categorical data and XGBoost’s robustness, improved prediction stability. The preprocessing steps, such as frequency encoding and NaN indicators, addressed limitations from EDA, enabling the ensemble to generalize better than simpler models or individual trees. This approach likely outperformed Phase 1 and 3’s baseline models by better capturing complex patterns, leading to a competitive Kaggle submission.
 
 ---
 
-### 7. Financial or Practical Results
-- Quantify the model’s impact (e.g., error reduction, prediction accuracy) based on competition metrics. If applicable, estimate practical benefits (e.g., improved decision-making efficiency) without specific financial data.
-- Conclude with the achievement of project objectives and the solution’s readiness for use.
+### 7. Contest Results
+Earned the first place in both private and public score leaderboard:
+<img src = "Images/first_place.png">
+<img src = "Images/first_place_private.png">
 
 ---
 
 ### 8. Web App and Next Steps
 - The Streamlit app allows users to input data and receive predictions, integrating the trained model and preprocessing pipeline.
+- However, due to some technical issues, we could only deployed Phase 1 and XGBoost and LightGBM of Phase 2.
 - Future steps include optimizing deployment (e.g., cloud hosting on AWS) and enhancing the app with additional features like interactive visualizations.
 - Include screenshots of the app’s homepage, prediction interface, and sample output.
 
@@ -368,5 +361,34 @@ Attentive Interpretable Tabular Learning. Neural network architecture developed 
 
 #### Steps
 1. Clone the repository:
-   ```bash
+   ```sh
    git clone <repository-url>
+   ```
+
+2. Navigate to the directory:
+
+    ```sh
+    cd Intro-to-ML
+    ```
+
+3. Create a virtual environment:
+    ```sh
+    python -m venv venv
+    ```
+
+4. Activate the environment:
+    ```sh
+    source venv/bin/activate  # Use venv\Scripts\activate on Windows
+    ```
+5. Install dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+6. Run the app:
+    ```sh
+    streamlit run app.py
+    ```
+
+7. Access locally at http://127.0.0.1:8501/.
+8. Stop with Ctrl+C and deactivate with: deactivate
