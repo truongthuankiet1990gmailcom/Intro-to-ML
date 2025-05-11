@@ -97,7 +97,9 @@ The dataset consists of 1,200,000 training entries and 800,000 test entries, wit
 - **Key Observations:**
     - Missing values are present in both numerical and categorical features.
     - NAN values in some features (e.g., Feature_1, Feature_4) provide additional information and should not be naively imputed.
+    
 - **Numerical features vs nan:**
+
     <img src = "Images/age_vs_nan.png">
     <img src = "Images/feature0_vs_nan.png">
     <img src = "Images/feature2_vs_nan.png">
